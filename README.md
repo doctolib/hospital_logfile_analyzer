@@ -1,5 +1,8 @@
 # Introduction
-Tool to parse Cloverleaf log files. This tool is not affiliated with Infor Cloverleaf and has been developed to parse the logfile and analyze the contents for errors.
+Tool to convert plain-text log files to structured data. Currently supported logfile formats:
+- Cloverleaf log files (NB: This tool is not affiliated with Infor Cloverleaf.)
+
+![Convert plain-text log files to structured data](preview.png)
 
 # How to use
 Using git, clone the repository to your working directory:
