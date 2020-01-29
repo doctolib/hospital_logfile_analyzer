@@ -1,5 +1,5 @@
 # Introduction
-Tool to parse Cloverleaf log files.
+Tool to parse Cloverleaf log files. This tool is not affiliated with Infor Cloverleaf and has been developed to parse the logfile and analyze the contents for errors.
 
 # How to use
 Using git, clone the repository to your working directory:
