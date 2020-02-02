@@ -1,1 +1,1 @@
-/opt/anaconda3/bin/python -m unittest
+python -m unittest
