@@ -18,14 +18,14 @@ This package only support Python 3.
 To view and run the Jupyter Notebook, you would best install an [Anaconda environment](https://docs.anaconda.com/anaconda/install/).
 
 ## Command-line interface
-`main.py` implements a command-line argument parser.
+You can execute the logfile parser in the command-line of your choice (e.g. bash).
+`main.py` implements the command-line argument parser.
 Display all options:
 ```bash
 python main.py --help
 ```
 
-An easiest call to run the application:
-
+The easiest call to run the application:
 ```bash
 python main.py mylogfile.log output_structured_log.json
 ```
@@ -34,6 +34,9 @@ A more sophisticated application call would involve mapping and/or field filteri
 ```bash
 python main.py mylogfile.log output_structured_log.json --mappingfile my_mapping.json --filterfile my_filter.json
 ```
+
+## Jupyter Notebook
+You will find examples on how to execute this package in a Jupyter Notebook inside [jupyter_notebooks](jupyter_notebooks) directory.
 
 ## Package
 You can use the logfile parser directly in your Python code:
