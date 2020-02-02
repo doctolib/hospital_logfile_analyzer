@@ -1,0 +1,84 @@
+[
+  {
+    "time": "Jan 22, 2020 12:34:27 AM",
+    "direction": "Inbound Message",
+    "info": {
+      "clientport": "14290",
+      "pathinfo": "/sync",
+      "requestURL": "http://10.3.17.233:8200/sync",
+      "query": "last_event_id=f744fccf1cb2952fab8b",
+      "path": "/sync",
+      "clientip": "10.251.15.10",
+      "method": "GET"
+    },
+    "handle": "com.infor.cloverleaf.gjdws.handlers.RawHandler",
+    "Message Content": {},
+    "Incoming Request Header Information": {
+      "Content-Length": "0",
+      "Accept-Encoding": "gzip",
+      "Accept": "application/vnd.doctolib.v1+json",
+      "User-Agent": "SAP NetWeaver Application Server (1.0;750)",
+      "Host": "10.3.17.233:8200",
+      "Date": "Tue, 21 Jan 2020 23:34:27 GMT",
+      "Content-MD5": "1B2M2Y8AsgTpgAmY7PhCfg==",
+      "Content-Type": "text/html",
+      "Authorization": "APIAuth 987:+wewODVlgLJeoFuDV1/2p0DrHLU="
+    }
+  },
+  {
+    "info": {},
+    "direction": "Outbound Message",
+    "Response message content": {
+      "text": "{\"events\":[]}"
+    },
+    "handle": "com.infor.cloverleaf.gjdws.handlers.RawHandler",
+    "Headers": {
+      "Expect-CT": "max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;",
+      "X-Request-Id": "52e4abb0689a2d80f022abb3be8016fa",
+      "X-XSS-Protection": "1; mode=block",
+      "X-Download-Options": "noopen",
+      "X-Content-Type-Options": "nosniff",
+      "transfer-encoding": "chunked",
+      "Set-Cookie": "__cfduid=d06fa3c40b9cf6aee8de73ada7694a8c71579649668; expires=Thu, 20-Feb-20 23:34:28 GMT; path=/; domain=.doctolib.de; HttpOnly; SameSite=Lax",
+      "CF-Cache-Status": "DYNAMIC",
+      "Strict-Transport-Security": "max-age=15724800; includeSubDomains",
+      "Vary": "Accept-Encoding",
+      "connection": "keep-alive",
+      "Server": "cloudflare",
+      "X-Runtime": "0.028273",
+      "ETag": "W/&quot;24de1c4a19c43ad41b013f13dcd858c1&quot;",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "Cache-Control": "max-age=0, private, must-revalidate",
+      "Date": "Tue, 21 Jan 2020 23:34:28 GMT",
+      "CF-RAY": "558d1958fc6a7e91-MUC",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Content-Type": "application/json; charset=utf-8",
+      "X-Frame-Options": "SAMEORIGIN"
+    },
+    "time": "Jan 22, 2020 12:34:28 AM",
+    "Response information": {
+      "Response Code": "200"
+    }
+  },
+  {
+    "time": "Jan 22, 2020 1:34:28 AM"
+  },
+  {
+    "time": "Jan 22, 2020 1:34:28 AM",
+    "Response information": {
+      "Response Code": "201"
+    }
+  },
+  {
+    "time": "Jan 22, 2020 1:34:28 AM"
+  },
+  {
+    "time": "Jan 22, 2020 1:34:28 AM",
+    "Response information": {
+      "Response Code": "400"
+    },
+    "Response message content": {
+      "text": "{\"error\":\"invalid_json\",\"error_messages\":[\"Impossible de parser le contenu du message au format JSON.\"]}"
+    }
+  }
+]
