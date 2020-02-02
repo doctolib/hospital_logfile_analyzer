@@ -1,6 +1,7 @@
 # Introduction
-Tool to convert plain-text log files to structured data. Currently supported logfile formats:
-- Cloverleaf log files (NB: This tool is not affiliated with Infor Cloverleaf.)
+Tool to convert plain-text hospital integration engines' log files to
+structured data. Currently supported logfile formats:
+- Cloverleaf plain-text log files (NB: This tool is not affiliated with Infor Cloverleaf.)
 
 ![Convert plain-text log files to structured data](preview.png)
 
@@ -8,7 +9,7 @@ Tool to convert plain-text log files to structured data. Currently supported log
 Using git, clone the repository to your working directory:
 ```bash
 cd my_projects
-git clone git@github.com:pavlodyban/cloverleaf_parser.git
+git clone git@github.com:pavlodyban/hospital_logfile_analyzer.git
 ```
 
 ## Prerequisites
@@ -35,15 +36,18 @@ python main.py mylogfile.log output_structured_log.json --mappingfile my_mapping
 ```
 
 ## Package
-You can use the parser directly in your Python code:
+You can use the logfile parser directly in your Python code:
 ```python
-from cloverleaf_parser import parse
+from parsers import parse
 parser = parse('test/test.log')
 print(len(parser.events))
 ```
 
 # How to test
-Execute `run_tests.sh` in your terminal.
+Execute `run_tests.sh` in your terminal, or run in the root folder of the package:
+```bash
+python -m unittest
+```
 
 # Todo
 
