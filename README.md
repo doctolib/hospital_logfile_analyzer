@@ -49,8 +49,10 @@ Execute `run_tests.sh` in your terminal, or run in the root folder of the packag
 python -m unittest
 ```
 
-# Todo
+# How to contribute
+You can add your own logfile parsers:
+1. Inherit `YourOwnParser` from the abstract parent interface [`LogfileParser`](parsers/logfile_parser.py).
+2. Add unit tests by adding `test_yourownparser.py` under `test`.
 
-1. Add license.
-2. Add authorship.
-3. Publish to open source community.
+# License
+See [LICENSE](LICENSE).
