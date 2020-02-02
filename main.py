@@ -2,27 +2,39 @@
 This package allows for parsing of Cloverleaf log files into structured data.
 The structured data can later be rendered for quick inspection, e.g. as a CSV table.
 
-\author Pavlo Dyban (Doctolib GmbH)
-\date   23-Jan-2020
+@author Pavlo Dyban (Doctolib GmbH)
+@date   23-Jan-2020
 """
 
 import argparse
-import cloverleaf_parser
+from parsers import parse, verify_file, write_to_json
 import json
 
+
 def main():
-    parser = argparse.ArgumentParser(description="Parse Cloverleaf logfiles into structured data representation.")
-    parser.add_argument('file', help="path to the log file, e.g. test.log")
-    parser.add_argument('outfile', help="path to the output JSON file, e.g. test.json")
-    parser.add_argument('--encoding', help='encoding of the log file, e.g. latin1', type=str, default='utf-8')
-    parser.add_argument('--mappingfile', help='JSON file containing field mapping', type=str)
-    parser.add_argument('--filterfile', help='JSON file containing field filter (filter is applied after mapping)', type=str)
+    parser = argparse.ArgumentParser(
+            description="""Parse Cloverleaf logfiles into structured data
+                            representation.""")
+    parser.add_argument('file',
+            help="path to the log file, e.g. test.log")
+    parser.add_argument('outfile',
+            help="path to the output JSON file, e.g. test.json")
+    parser.add_argument('--encoding',
+            help='encoding of the log file, e.g. latin1',
+            type=str,
+            default='utf-8')
+    parser.add_argument('--mappingfile',
+            help='JSON file containing field mapping',
+            type=str)
+    parser.add_argument('--filterfile',
+            help='JSON file containing field filter (filter is applied after mapping)',
+            type=str)
 
     args = parser.parse_args()
 
-    cloverleaf_parser.verify_file(args.file)
+    verify_file(args.file)
 
-    parser = cloverleaf_parser.parse(filename=args.file, encoding=args.encoding)
+    parser = parse(filename=args.file, encoding=args.encoding)
 
     if args.mappingfile:
         with open(args.mappingfile) as f:
@@ -34,7 +46,7 @@ def main():
             filter = json.load(f)
         parser.filter_fields(filter)
 
-    cloverleaf_parser.write_to_json(parser, out_file=args.outfile, encoding=args.encoding)
+    write_to_json(parser, out_file=args.outfile, encoding=args.encoding)
 
 
 if __name__ == '__main__':
