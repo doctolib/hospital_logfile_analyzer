@@ -2,14 +2,14 @@
 Test suite for CloverleafParser
 """
 import unittest
-from parsers import CloverleafLogfileParser
+from hospital_logfile_analyzer.parsers import CloverleafLogfileParser
 import json
 
 
 class TestCloverleafParser(unittest.TestCase):
     def setUp(self):
         self.parser = CloverleafLogfileParser()
-        self.example_logfile = "test/test.log"
+        self.example_logfile = "hospital_logfile_analyzer/test/test.log"
         with open(self.example_logfile) as f:
             self.parser.parse(f)
 
@@ -21,7 +21,7 @@ class TestCloverleafParser(unittest.TestCase):
 
     def test_can_parse_example_file(self):
         self.assertEqual(len(self.parser.events), 6)
-        with open("test/test_cloverleaf_parser_expected_results.json") as f:
+        with open("hospital_logfile_analyzer/test/test_cloverleaf_parser_expected_results.json") as f:
             expected_events = json.load(f)
             for event_index, expected_event in enumerate(expected_events):
                 event = self.parser.events[event_index]
