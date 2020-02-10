@@ -65,7 +65,7 @@ The field names inside subtrees are separated by dots.
 
 The following example snippet will copy (or move, depending on the function
 parameters) the value of field `Tree.Error Code` into `Error Code`:
-```
+```json
 {
   "Tree.Error Code": "Error Code",
   "Tree.Result.Code": "Result Code"
@@ -80,7 +80,7 @@ Field filters allow to remove fields and subtrees from the structured data.
 
 The following example will remove fields `Tree.Error Code` and will keep
 `Tree.Result.Code`:
-```
+```json
 {
   "Tree.Error Code": false,
   "Tree.Result.Code": true
@@ -101,6 +101,9 @@ python -m unittest
 You can add your own logfile parsers:
 1. Inherit `YourOwnParser` from the abstract parent interface [`LogfileParser`](parsers/logfile_parser.py).
 2. Add unit tests by adding `test_yourownparser.py` under `test`.
+3. Commit changes to your own branch and create a pull request.
+The tests on the branch must run green before the
+branch can be merged.
 
 # License
 See [LICENSE](LICENSE).
