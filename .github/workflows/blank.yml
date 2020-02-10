@@ -1,0 +1,16 @@
+name: 'CI'
+author: 'Pavlo Dyban (Doctolib GmbH)'
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: test
+      run: |
+        python -m venv venv
+        python -m pip install -r requirements.txt
+        python -m unittest
+    - name: deploy
+      run: echo "deployment placeholder"
