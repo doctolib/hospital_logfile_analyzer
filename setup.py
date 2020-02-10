@@ -1,15 +1,23 @@
 from setuptools import setup, find_packages
 
+# read the contents of your README file
+from os import path
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
   name = 'hospital_logfile_analyzer',
   packages = find_packages(),
-  version = '0.1',
+  version = '0.1.3',
   license='MIT',
   description = 'Tool to convert plain-text hospital integration engines\' log files to structured data',
+  long_description=long_description,
+  long_description_content_type='text/markdown',
   author = 'Pavlo Dyban (Doctolib GmbH)',
   author_email = 'pavlo.dyban@doctolib.com',
   url = 'https://github.com/doctolib/hospital_logfile_analyzer',
-  download_url = 'https://github.com/doctolib/hospital_logfile_analyzer/archive/v.0.1.tar.gz',
+  download_url = 'https://github.com/doctolib/hospital_logfile_analyzer/archive/v.0.1.3.tar.gz',
   keywords = ['logfile', 'parser', 'integration engine', 'communication server',
         'HIS', 'hospital', 'information system', 'communication',
         'TCP/IP', 'structured data'],

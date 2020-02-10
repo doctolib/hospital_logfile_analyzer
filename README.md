@@ -3,19 +3,38 @@ Tool to convert plain-text hospital integration engines' log files to
 structured data. Currently supported logfile formats:
 - Cloverleaf plain-text log files (NB: This tool is not affiliated with Infor Cloverleaf.)
 
-![Convert plain-text log files to structured data](preview.png)
+![Convert plain-text log files to structured data](https://github.com/doctolib/hospital_logfile_analyzer/blob/master/preview.png?raw=true)
 
-# How to use
-Using git, clone the repository to your working directory:
+# How to install
+
+## Install from Pypi
 ```bash
-cd my_projects
-git clone git@github.com:pavlodyban/hospital_logfile_analyzer.git
+pip install hospital_logfile_analyzer
+```
+
+## Install from Github
+Download the latest release as a `tar.gz` archive from the [Github repository page](https://github.com/doctolib/hospital_logfile_analyzer/releases):
+```bash
+wget https://github.com/doctolib/hospital_logfile_analyzer/archive/v.0.1.tar.gz
+tar -xvf v.0.1.tar.gz
+cd hospital_logfile_analyzer
+rm v.0.1.tar.gz
+python setup.py install
+```
+
+
+## Install from source code
+Using git, clone the repository to your working directory, and install the package:
+```bash
+git clone git@github.com:doctolib/hospital_logfile_analyzer.git
+cd hospital_logfile_analyzer
+python setup.py install
 ```
 
 ## Prerequisites
-This package only support Python 3.
+This package supports Python 3 and has not been tested with Python 2.
 
-To view and run the Jupyter Notebook, you would best install an
+To view and run the attached Jupyter Notebooks, best install an
 [Anaconda environment](https://docs.anaconda.com/anaconda/install/).
 
 ## Command-line interface
