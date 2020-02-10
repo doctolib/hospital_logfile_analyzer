@@ -13,9 +13,8 @@ jobs:
       with:
         python-version: '3.x'
     - run: |
-        ls -la
+        cd hospital_logfile_analyzer
         python -m venv venv
         source venv/bin/activate
-        ls -la
         python -m pip install -r requirements.txt
         python -m unittest
