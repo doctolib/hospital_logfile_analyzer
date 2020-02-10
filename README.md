@@ -23,17 +23,17 @@ You can execute the logfile parser in the command-line of your choice (e.g. bash
 `main.py` implements the command-line argument parser.
 Display all options:
 ```bash
-python main.py --help
+python -m hospital_logfile_analyzer --help
 ```
 
 The easiest call to run the application:
 ```bash
-python main.py mylogfile.log output_structured_log.json
+python -m hospital_logfile_analyzer mylogfile.log output_structured_log.json
 ```
 
 A more sophisticated application call would involve mapping and/or field filtering:
 ```bash
-python main.py mylogfile.log output_structured_log.json --mappingfile my_mapping.json --filterfile my_filter.json
+python -m hospital_logfile_analyzer mylogfile.log output_structured_log.json --mappingfile my_mapping.json --filterfile my_filter.json
 ```
 For instructions on how to create field maps and filters,
 see the respective sections in text below.
@@ -45,8 +45,8 @@ inside [jupyter_notebooks](jupyter_notebooks) directory.
 ## Package
 You can use the logfile parser directly in your Python code:
 ```python
-from parsers import parse
-parser = parse('test/test.log')
+from hospital_logfile_analyzer.parsers import parse
+parser = parse('hospital_logfile_analyzer/test/test.log')
 print(len(parser.events))
 ```
 
@@ -91,16 +91,17 @@ on how to pass this file to the application, see the CLI or the Python package
 usage documentation in text above.
 
 # How to test
-Execute `run_tests.sh` in your terminal, or run in the root folder of the
-package:
+Execute in the root folder of the repository:
 ```bash
 python -m unittest
 ```
+This will discover and execute all tests contained
+inside `hospital_logfile_analyzer/test`.
 
 # How to contribute
 You can add your own logfile parsers:
-1. Inherit `YourOwnParser` from the abstract parent interface [`LogfileParser`](parsers/logfile_parser.py).
-2. Add unit tests by adding `test_yourownparser.py` under `test`.
+1. Inherit `YourOwnParser` from the abstract parent interface [`LogfileParser`](hospital_logfile_analyzer/parsers/logfile_parser.py).
+2. Add unit tests by adding `test_yourownparser.py` under `hospital_logfile_analyzer/test`.
 3. Commit changes to your own branch and create a pull request.
 The tests on the branch must run green before the
 branch can be merged.

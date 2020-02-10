@@ -7,7 +7,7 @@ The structured data can later be rendered for quick inspection, e.g. as a CSV ta
 """
 
 import argparse
-from parsers import parse, verify_file, write_to_json
+from hospital_logfile_analyzer.parsers import parse, verify_file, write_to_json
 import json
 
 
