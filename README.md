@@ -3,19 +3,38 @@ Tool to convert plain-text hospital integration engines' log files to
 structured data. Currently supported logfile formats:
 - Cloverleaf plain-text log files (NB: This tool is not affiliated with Infor Cloverleaf.)
 
-![Convert plain-text log files to structured data](preview.png)
+![Convert plain-text log files to structured data](https://github.com/doctolib/hospital_logfile_analyzer/blob/master/preview.png?raw=true)
 
-# How to use
-Using git, clone the repository to your working directory:
+# How to install
+
+## Install from Pypi
 ```bash
-cd my_projects
-git clone git@github.com:pavlodyban/hospital_logfile_analyzer.git
+pip install hospital_logfile_analyzer
+```
+
+## Install from Github
+Download the latest release as a `tar.gz` archive from the [Github repository page](https://github.com/doctolib/hospital_logfile_analyzer/releases):
+```bash
+wget https://github.com/doctolib/hospital_logfile_analyzer/archive/v.0.1.tar.gz
+tar -xvf v.0.1.tar.gz
+cd hospital_logfile_analyzer
+rm v.0.1.tar.gz
+python setup.py install
+```
+
+
+## Install from source code
+Using git, clone the repository to your working directory, and install the package:
+```bash
+git clone git@github.com:doctolib/hospital_logfile_analyzer.git
+cd hospital_logfile_analyzer
+python setup.py install
 ```
 
 ## Prerequisites
-This package only support Python 3.
+This package supports Python 3 and has not been tested with Python 2.
 
-To view and run the Jupyter Notebook, you would best install an
+To view and run the attached Jupyter Notebooks, best install an
 [Anaconda environment](https://docs.anaconda.com/anaconda/install/).
 
 ## Command-line interface
@@ -23,17 +42,17 @@ You can execute the logfile parser in the command-line of your choice (e.g. bash
 `main.py` implements the command-line argument parser.
 Display all options:
 ```bash
-python main.py --help
+python -m hospital_logfile_analyzer --help
 ```
 
 The easiest call to run the application:
 ```bash
-python main.py mylogfile.log output_structured_log.json
+python -m hospital_logfile_analyzer mylogfile.log output_structured_log.json
 ```
 
 A more sophisticated application call would involve mapping and/or field filtering:
 ```bash
-python main.py mylogfile.log output_structured_log.json --mappingfile my_mapping.json --filterfile my_filter.json
+python -m hospital_logfile_analyzer mylogfile.log output_structured_log.json --mappingfile my_mapping.json --filterfile my_filter.json
 ```
 For instructions on how to create field maps and filters,
 see the respective sections in text below.
@@ -45,8 +64,8 @@ inside [jupyter_notebooks](jupyter_notebooks) directory.
 ## Package
 You can use the logfile parser directly in your Python code:
 ```python
-from parsers import parse
-parser = parse('test/test.log')
+from hospital_logfile_analyzer.parsers import parse
+parser = parse('hospital_logfile_analyzer/test/test.log')
 print(len(parser.events))
 ```
 
@@ -91,16 +110,17 @@ on how to pass this file to the application, see the CLI or the Python package
 usage documentation in text above.
 
 # How to test
-Execute `run_tests.sh` in your terminal, or run in the root folder of the
-package:
+Execute in the root folder of the repository:
 ```bash
 python -m unittest
 ```
+This will discover and execute all tests contained
+inside `hospital_logfile_analyzer/test`.
 
 # How to contribute
 You can add your own logfile parsers:
-1. Inherit `YourOwnParser` from the abstract parent interface [`LogfileParser`](parsers/logfile_parser.py).
-2. Add unit tests by adding `test_yourownparser.py` under `test`.
+1. Inherit `YourOwnParser` from the abstract parent interface [`LogfileParser`](hospital_logfile_analyzer/parsers/logfile_parser.py).
+2. Add unit tests by adding `test_yourownparser.py` under `hospital_logfile_analyzer/test`.
 3. Commit changes to your own branch and create a pull request.
 The tests on the branch must run green before the
 branch can be merged.
