@@ -1,5 +1,4 @@
 name: 'CI'
-author: 'Pavlo Dyban (Doctolib GmbH)'
 
 on: [push]
 
@@ -9,7 +8,6 @@ jobs:
     steps:
     - name: test
       run: |
-        python -m venv venv
         python -m pip install -r requirements.txt
         python -m unittest
     - name: deploy
