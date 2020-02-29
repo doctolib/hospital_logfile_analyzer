@@ -1,0 +1,143 @@
+Engine idle -- 01/22/2020 00:31:12
+
+Jan 22, 2020 12:34:27 AM com.infor.cloverleaf.gjdws.handlers.RawHandler handle
+INFO: Inbound Message:
+path=/sync
+method=GET
+requestURL=http://XX.XX.XX.XXX:YYYY/sync
+clientip=ZZ.ZZ.ZZ.ZZ
+query=last_event_id=f744fccf1cb2952fab8b
+clientport=14290
+pathinfo=/sync
+----------------Incoming Request Header Information-------------
+Authorization=XXX
+Accept=application/vnd.doctolib.v1+json
+User-Agent=SAP NetWeaver Application Server (1.0;750)
+Host=XX.XX.XX.XX:YYYY
+Accept-Encoding=gzip
+Content-Length=0
+Date=Tue, 21 Jan 2020 23:34:27 GMT
+Content-Type=text/html
+Content-MD5=1B2M2Y8AsgTpgAmY7PhCfg==
+----------------Message Content---------------------------------
+
+Jan 22, 2020 12:34:28 AM com.infor.cloverleaf.gjdws.handlers.RawHandler handle
+INFO: Outbound Message:
+----------------Response information----------------------------
+Response Code:200
+----------------Headers-----------------------------------------
+transfer-encoding=chunked
+CF-RAY=558d1958fc6a7e91-MUC
+Server=cloudflare
+X-Request-Id=52e4abb0689a2d80f022abb3be8016fa
+X-Content-Type-Options=nosniff
+X-Runtime=0.028273
+X-Download-Options=noopen
+X-Permitted-Cross-Domain-Policies=none
+Date=Tue, 21 Jan 2020 23:34:28 GMT
+X-Frame-Options=SAMEORIGIN
+Referrer-Policy=strict-origin-when-cross-origin
+CF-Cache-Status=DYNAMIC
+Strict-Transport-Security=max-age=15724800; includeSubDomains
+Cache-Control=max-age=0, private, must-revalidate
+ETag=W/&quot;24de1c4a19c43ad41b013f13dcd858c1&quot;
+connection=keep-alive
+Vary=Accept-Encoding
+X-XSS-Protection=1; mode=block
+Content-Type=application/json; charset=utf-8
+Expect-CT=max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+----------------Response message content------------------------
+{"events":[]}
+Engine idle -- 01/22/2020 00:34:38
+
+
+
+
+
+Jan 22, 2020 1:34:28 AM com.infor.cloverleaf.gjdws.handlers.RawHandler handle
+INFO: Inbound Message:
+path=/sync
+method=POST
+requestURL=http://XX.XX.XX.XXX:YYYY/sync
+clientip=ZZ.ZZ.ZZ.ZZ
+clientport=14388
+pathinfo=/sync
+----------------Incoming Request Header Information-------------
+Authorization=XXX
+Accept=application/vnd.doctolib.v1+json
+User-Agent=SAP NetWeaver Application Server (1.0;750)
+Host=XX.XX.XX.XX:YYYY
+Accept-Encoding=gzip
+Content-Length=225
+Date=Wed, 22 Jan 2020 00:34:28 GMT
+Content-Type=application/json; charset=UTF-8
+Content-MD5=RjKqpiW0bMdUjyTRlzGy3Q==
+----------------Message Content---------------------------------
+{"patient":{"last_name": "XXX","first_name": "XXX","maiden_name": "XXX","gender": "X","birthdate": "XXX","address": "XXX","zipcode": "XXXXX","city": "XXXXX","import_identifier": "XXX"}
+Jan 22, 2020 1:34:28 AM com.infor.cloverleaf.gjdws.handlers.RawHandler handle
+INFO: Outbound Message:
+----------------Response information----------------------------
+Response Code:201
+----------------Headers-----------------------------------------
+transfer-encoding=chunked
+CF-RAY=558d713eda5b7d0c-MUC
+Server=cloudflare
+X-Request-Id=d74afab68cf16dc846f79eff40cf4f40
+X-Content-Type-Options=nosniff
+X-Runtime=0.090551
+X-Download-Options=noopen
+X-Permitted-Cross-Domain-Policies=none
+Date=Wed, 22 Jan 2020 00:34:28 GMT
+X-Frame-Options=SAMEORIGIN
+Referrer-Policy=strict-origin-when-cross-origin
+CF-Cache-Status=DYNAMIC
+Strict-Transport-Security=max-age=15724800; includeSubDomains
+Cache-Control=max-age=0, private, must-revalidate
+ETag=W/&quot;c955e57777ec0d73639dca6748560d00&quot;
+connection=keep-alive
+X-XSS-Protection=1; mode=block
+Content-Type=application/json; charset=utf-8
+Expect-CT=max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+----------------Response message content------------------------
+{"success":true}
+Jan 22, 2020 1:34:28 AM com.infor.cloverleaf.gjdws.handlers.RawHandler handle
+INFO: Inbound Message:
+path=/sync
+method=POST
+requestURL=http://XX.XX.XX.XXX:YYYY/sync
+clientip=ZZ.ZZ.ZZ.ZZ
+clientport=14390
+pathinfo=/sync
+----------------Incoming Request Header Information-------------
+Authorization=XXX
+Accept=application/vnd.doctolib.v1+json
+User-Agent=SAP NetWeaver Application Server (1.0;750)
+Host=XX.XX.XX.XX:YYYY
+Accept-Encoding=gzip
+Content-Length=224
+Date=Wed, 22 Jan 2020 00:34:28 GMT
+Content-Type=application/json; charset=UTF-8
+Content-MD5=ilKREFAeGiJkG9y9vYNwKA==
+----------------Message Content---------------------------------
+{"patient":{"last_name": "XXX","first_name": "XXX","maiden_name": "XXX","gender": "X","birthdate": "XXX","address": "XXX","zipcode": "XXXXX","city": "XXXXX","import_identifier": "XXX"}
+Jan 22, 2020 1:34:28 AM com.infor.cloverleaf.gjdws.handlers.RawHandler handle
+INFO: Outbound Message:
+----------------Response information----------------------------
+Response Code:400
+----------------Headers-----------------------------------------
+transfer-encoding=chunked
+CF-RAY=558d71401a967d0c-MUC
+Server=cloudflare
+X-Request-Id=f8a4463fffe262d3329d653748ad161d
+X-Content-Type-Options=nosniff
+X-Runtime=0.011967
+Date=Wed, 22 Jan 2020 00:34:28 GMT
+X-Frame-Options=SAMEORIGIN
+CF-Cache-Status=DYNAMIC
+Strict-Transport-Security=max-age=15724800; includeSubDomains
+connection=keep-alive
+X-XSS-Protection=1; mode=block
+Content-Type=application/json
+Expect-CT=max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+----------------Response message content------------------------
+{"error":"invalid_json","error_messages":["Impossible de parser le contenu du message au format JSON."]}
