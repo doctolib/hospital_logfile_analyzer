@@ -6,10 +6,12 @@ this_directory = path.abspath(path.dirname(__file__))
 with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
+VERSION = '0.1.4'
+
 setup(
   name = 'hospital_logfile_analyzer',
   packages = find_packages(),
-  version = '0.1.4',
+  version = VERSION,
   license='MIT',
   description = 'Tool to convert plain-text hospital integration engines\' log files to structured data',
   long_description=long_description,
@@ -17,7 +19,7 @@ setup(
   author = 'Pavlo Dyban (Doctolib GmbH)',
   author_email = 'pavlo.dyban@doctolib.com',
   url = 'https://github.com/doctolib/hospital_logfile_analyzer',
-  download_url = 'https://github.com/doctolib/hospital_logfile_analyzer/archive/v.0.1.4.tar.gz',
+  download_url = f"https://github.com/doctolib/hospital_logfile_analyzer/archive/v.{VERSION}.tar.gz",
   keywords = ['logfile', 'parser', 'integration engine', 'communication server',
         'HIS', 'hospital', 'information system', 'communication',
         'TCP/IP', 'structured data'],
