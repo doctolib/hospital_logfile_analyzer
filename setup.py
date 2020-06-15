@@ -38,4 +38,9 @@ setup(
     'Programming Language :: Python :: 3.8',
   ],
   test_suite="hospital_logfile_analyzer.test",
+  entry_points={
+    'console_scripts': [
+        'hla = hospital_logfile_analyzer.__main__:main',
+    ],
+  },
 )
